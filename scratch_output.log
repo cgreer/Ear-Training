@@ -1,12 +1,38 @@
 
-./sounds/individual/370.wav:
+|sox ./sounds/individual/tone_guitar/415.wav -p pad 0.0:
 
- File Size: 288k      Bit Rate: 1.54M
   Encoding: Signed PCM    
-  Channels: 2 @ 16-bit   
+  Channels: 2 @ 32-bit   
 Samplerate: 48000Hz      
 Replaygain: off         
-  Duration: 00:00:01.50  
+  Duration: unknown      
 
-In:0.00% 00:00:00.00 [00:00:01.50] Out:0     [      |      ]        Clip:0    In:34.1% 00:00:00.51 [00:00:00.99] Out:24.6k [!=====|=====!]        Clip:0    In:45.5% 00:00:00.68 [00:00:00.82] Out:32.8k [ -====|====- ] Hd:0.0 Clip:0    In:56.9% 00:00:00.85 [00:00:00.65] Out:41.0k [  ====|====  ] Hd:0.0 Clip:0    In:68.3% 00:00:01.02 [00:00:00.48] Out:49.2k [  -===|===-  ] Hd:0.0 Clip:0    In:79.6% 00:00:01.19 [00:00:00.31] Out:57.3k [   ===|===   ] Hd:0.0 Clip:0    In:91.0% 00:00:01.37 [00:00:00.13] Out:65.5k [   -==|==-   ] Hd:0.0 Clip:0    In:100%  00:00:01.50 [00:00:00.00] Out:72.0k [    ==|==    ] Hd:0.0 Clip:0    
+
+|sox ./sounds/individual/tone_guitar/277.wav -p pad 1.0:
+
+  Encoding: Signed PCM    
+  Channels: 2 @ 32-bit   
+Samplerate: 48000Hz      
+Replaygain: off         
+  Duration: unknown      
+
+
+|sox ./sounds/individual/tone_guitar/262.wav -p pad 2.0:
+
+  Encoding: Signed PCM    
+  Channels: 2 @ 32-bit   
+Samplerate: 48000Hz      
+Replaygain: off         
+  Duration: unknown      
+
+
+|sox ./sounds/individual/tone_guitar/370.wav -p pad 3.0:
+
+  Encoding: Signed PCM    
+  Channels: 2 @ 32-bit   
+Samplerate: 48000Hz      
+Replaygain: off         
+  Duration: unknown      
+
+In:0.00% 00:00:00.00 [00:00:00.00] Out:0     [      |      ]        Clip:0    In:0.00% 00:00:00.51 [00:00:00.00] Out:24.6k [  -===|===-  ]        Clip:0    In:0.00% 00:00:00.68 [00:00:00.00] Out:32.8k [     =|=     ]        Clip:0    In:0.00% 00:00:00.85 [00:00:00.00] Out:41.0k [     -|-     ]        Clip:0    In:0.00% 00:00:01.02 [00:00:00.00] Out:49.2k [  ====|====  ]        Clip:0    In:0.00% 00:00:01.19 [00:00:00.00] Out:57.3k [  -===|===-  ]        Clip:0    In:0.00% 00:00:01.37 [00:00:00.00] Out:65.5k [   -==|==-   ]        Clip:0    In:0.00% 00:00:01.54 [00:00:00.00] Out:73.7k [    ==|==    ]        Clip:0    In:0.00% 00:00:01.62 [00:00:00.00] Out:77.8k [    -=|=-    ]        Clip:0    In:0.00% 00:00:01.79 [00:00:00.00] Out:86.0k [     =|=     ]        Clip:0    In:0.00% 00:00:01.96 [00:00:00.00] Out:94.2k [     -|-     ]        Clip:0    In:0.00% 00:00:02.13 [00:00:00.00] Out:102k  [  ====|====  ]        Clip:0    In:0.00% 00:00:02.22 [00:00:00.00] Out:106k  [   ===|===   ]        Clip:0    In:0.00% 00:00:02.39 [00:00:00.00] Out:115k  [   ===|===   ]        Clip:0    In:0.00% 00:00:02.56 [00:00:00.00] Out:123k  [    ==|==    ]        Clip:0    In:0.00% 00:00:02.73 [00:00:00.00] Out:131k  [    -=|=-    ]        Clip:0    In:0.00% 00:00:02.82 [00:00:00.00] Out:135k  [     =|=     ]        Clip:0    In:0.00% 00:00:02.99 [00:00:00.00] Out:143k  [     -|-     ]        Clip:0    In:0.00% 00:00:03.16 [00:00:00.00] Out:152k  [  ====|====  ]        Clip:0    In:0.00% 00:00:03.33 [00:00:00.00] Out:160k  [   ===|===   ]        Clip:0    In:0.00% 00:00:03.50 [00:00:00.00] Out:168k  [    ==|==    ]        Clip:0    In:0.00% 00:00:03.67 [00:00:00.00] Out:176k  [    -=|=-    ]        Clip:0    In:0.00% 00:00:03.84 [00:00:00.00] Out:184k  [     =|=     ]        Clip:0    In:0.00% 00:00:04.01 [00:00:00.00] Out:193k  [     -|-     ]        Clip:0    In:0.00% 00:00:04.18 [00:00:00.00] Out:201k  [      |      ]        Clip:0    In:0.00% 00:00:04.35 [00:00:00.00] Out:209k  [      |      ]        Clip:0    In:0.00% 00:00:04.50 [00:00:00.00] Out:216k  [      |      ]        Clip:0    In:0.00% 00:00:04.50 [00:00:00.00] Out:216k  [      |      ]        Clip:0    
 Done.

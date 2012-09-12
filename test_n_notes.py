@@ -1,28 +1,32 @@
-from utility_sound import play_wav
+from utility_sound import play_wavs_sequential
 import random
+import os
+
 
 
 class Sound:
 
-    def __init__(self, note, frequency):
+    def __init__(self, note, frequency, soundType="tone_guitar"):
         self.note = note 
         self.frequency = frequency 
-        self.soundFile = './sounds/individual/' + str(self.frequency) + '.wav'
+        self.soundFile = './sounds/individual/' + soundType + '/' + str(self.frequency) + '.wav'
+        if not os.path.exists(self.soundFile):
+            print "WARNING: %s does not exist" % self.soundFile
         
     def play_sound(self):
-        play_wav(self.soundFile)
+        play_wavs_sequential([self.soundFile], .5, True)
 
 
-def load_notes():
+def load_notes(soundType):
     '''give a dictionary that maps the notes name (in A3 format [NOTE,NUMBER) to sound object'''
 
     #load all notes
     note_sound = {}
-    with open('./note_freq.info', 'r') as f:
+    with open('./notes_frequencies.rounded.info', 'r') as f:
         for line in f:
             noteName, noteFreq = line.strip().split("\t")
             noteFreq = int(noteFreq) #TODO up resolution to float
-            note_sound[noteName] = Sound(noteName, noteFreq)
+            note_sound[noteName] = Sound(noteName, noteFreq, soundType)
 
     return note_sound
         
@@ -62,15 +66,15 @@ def start_program():
     print "################################"
     print
 
-    #load/init
-    note_sound = load_notes()
+    #load/init, get config values
     conf = load_configuration('./configuration.conf')
-
-    #get number of notes to play/guess
+    noteDelay = float(conf["noteDelay"])
     numberOfNotes = int(conf["numberOfNotes"])
-
-    #get list of notes that user would like to be tested on
     notesToTest = conf["noteSelection"].split(',')
+    soundType = conf["playStyle"]
+
+    #load notes to be played 
+    note_sound = load_notes(soundType)
 
     #construct note set
     noteSet = set()
@@ -84,7 +88,8 @@ def start_program():
         print "\nPLAYING NOTES..."
         randomNotes = n_random_notes(noteSet, numberOfNotes)
         randomNoteNames = [x.note for x in randomNotes]
-        [note.play_sound() for note in randomNotes]
+        #[note.play_sound() for note in randomNotes]
+        play_wavs_sequential([note.soundFile for note in randomNotes], noteDelay, True)
 
         #ask user for notes played
         userAnswer = raw_input("  Which notes were played?\n   Choose from %s\n   CHOICES: " % ' '.join(notesToTest))
