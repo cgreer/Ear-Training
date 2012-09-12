@@ -1,2 +1,12 @@
 
-python ./test_n_notes.py
+==EAR TRAIN WITH PIANO==
+    requires "sox" package
+
+    python ./test_n_notes.py
+
+==GENERATING SYNTH NOTES==
+
+If you want to use pure tones or synthesized guitar plucks (see configuration) then run:
+
+    ./generating_notes.sh sin ./sounds/individual/tone
+    ./generating_notes.sh pluck ./sounds/individual/tone_guitar
